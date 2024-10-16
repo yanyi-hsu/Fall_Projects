@@ -39,11 +39,10 @@ video_height = int(monitor.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 video_writer = cv2.VideoWriter('classifer_video.mp4', fourcc, 24.0, (video_width, video_height))
 
-
 while monitor.isOpened():
     ret, frame = monitor.read()
     if ret:
-        results = pose_model.predict(frame, verbose=False, stream=True, imgsz=(640, 384), stream_buffer=True)
+        results = pose_model.predict(frame, verbose=False, stream=True, imgsz=(1088, 928), stream_buffer=True)
 
         for result in results:
             keypoints = result.keypoints.xy.cpu().numpy().astype(np.float32)
@@ -62,10 +61,7 @@ while monitor.isOpened():
 
                     for (x, y) in keypoints.reshape(-1, 2):
                         cv2.circle(frame, (int(x), int(y)), 5, (0, 255, 0), -1)
-
                     cv2.putText(frame, f'Predicted: {predicted_label[0]}', (900, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-
-            image_array = result.plot(im_gpu=1080)
             
         video_writer.write(frame)
         cv2.imshow('Yolov8m-pose with Classification', frame)
