@@ -13,12 +13,11 @@ bot = commands.Bot(command_prefix='$', intents=intent)
 @bot.event
 async def on_ready():
     print(f'Bot Identify --> {bot.user}')
-
     channel_id = jfile['project_channel']
     target_channel = bot.get_channel(channel_id)
     embed = discord.Embed(
-        title = '>> Service Online <<', 
-        color = discord.Color.random()
+        title = '>> 服務已上線 <<', 
+        color = discord.Color.green()
     )
     await target_channel.send(embed=embed)
 
@@ -26,19 +25,19 @@ async def on_ready():
 @bot.command()
 async def load(ctx, extension):
     await bot.load_extension(f"Cogs.{extension}")
-    await ctx.send(f"Loaded {extension} done.")
+    await ctx.send(f"載入 {extension} 完成")
 
 # 卸載指令檔案
 @bot.command()
 async def unload(ctx, extension):
     await bot.unload_extension(f"Cogs.{extension}")
-    await ctx.send(f"UnLoaded {extension} done.")
+    await ctx.send(f"卸載 {extension} 完成")
 
 # 重新載入程式檔案
 @bot.command()
 async def reload(ctx, extension):
     await bot.reload_extension(f"Cogs.{extension}")
-    await ctx.send(f"ReLoaded {extension} done.")
+    await ctx.send(f"重新載入 {extension} 完成")
 
 async def load_extensions():
     for filename in os.listdir("Discord/Cogs"):
@@ -49,6 +48,7 @@ async def main():
     async with bot:
         await load_extensions()
         await bot.start(jfile['TOKEN'])
+        #await human_detect()
 
 if __name__ == "__main__":
     asyncio.run(main())
