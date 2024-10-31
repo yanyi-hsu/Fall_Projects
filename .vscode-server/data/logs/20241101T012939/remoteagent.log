@@ -1,0 +1,18 @@
+2024-11-01 01:29:39.336 [info] 
+
+
+
+
+2024-11-01 01:29:39.371 [info] Extension host agent started.
+2024-11-01 01:29:39.729 [info] [127.0.0.1][1af82128][ManagementConnection] New connection established.
+2024-11-01 01:29:40.086 [info] [127.0.0.1][bfae8a4b][ExtensionHostConnection] New connection established.
+2024-11-01 01:29:40.130 [info] [127.0.0.1][bfae8a4b][ExtensionHostConnection] <1319> Launched Extension Host Process.
+2024-11-01 01:29:40.202 [info] [127.0.0.1][bfae8a4b][ExtensionHostConnection] <1319><stderr> Error reading NLS messages file /home/yanyi/.vscode-server/data/clp/5493b9c2a21b74d1ff4717613c6aca1d.zh-tw/912bb683695358a54ae0c670461738984cbb5b95/nls.messages.json: Error: ENOENT: no such file or directory, open '/home/yanyi/.vscode-server/data/clp/5493b9c2a21b74d1ff4717613c6aca1d.zh-tw/912bb683695358a54ae0c670461738984cbb5b95/nls.messages.json'
+
+2024-11-01 01:29:47.661 [info] [127.0.0.1][1af82128][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-11-01 01:29:47.712 [info] [127.0.0.1][bfae8a4b][ExtensionHostConnection] <1319> Extension Host Process exited with code: 0, signal: null.
+2024-11-01 01:29:50.211 [info] [127.0.0.1][6c7b0f91][ManagementConnection] New connection established.
+2024-11-01 01:29:50.850 [info] [127.0.0.1][7a8731a4][ExtensionHostConnection] New connection established.
+2024-11-01 01:29:50.856 [info] [127.0.0.1][7a8731a4][ExtensionHostConnection] <1456> Launched Extension Host Process.
+2024-11-01 01:29:50.947 [info] [127.0.0.1][7a8731a4][ExtensionHostConnection] <1456><stderr> Error reading NLS messages file /home/yanyi/.vscode-server/data/clp/5493b9c2a21b74d1ff4717613c6aca1d.zh-tw/912bb683695358a54ae0c670461738984cbb5b95/nls.messages.json: Error: ENOENT: no such file or directory, open '/home/yanyi/.vscode-server/data/clp/5493b9c2a21b74d1ff4717613c6aca1d.zh-tw/912bb683695358a54ae0c670461738984cbb5b95/nls.messages.json'
+
